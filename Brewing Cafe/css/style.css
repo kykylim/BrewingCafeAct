@@ -1,0 +1,2069 @@
+/* =========================================================
+   GOOGLE FONTS
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kalnia:wght@500;600;700&display=swap');
+
+
+/* =========================================================
+   ROOT COLORS
+   ========================================================= */
+
+:root {
+    --primary-color: #fff7e8;
+    --secondary-color: #482a1d;
+    --button-color: #a96835;
+    --text-color: #331200;
+    --accent-color: #ffecd4;
+}
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+
+    /*
+       Prevent headings/sections from being hidden
+       behind the sticky navigation when clicking
+       navigation links.
+    */
+    scroll-padding-top: 90px;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+
+    background-color: var(--primary-color);
+    color: var(--text-color);
+
+    font-family: "Inter", Arial, sans-serif;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   GENERAL TYPOGRAPHY
+   ========================================================= */
+
+h1,
+h2,
+h3 {
+    font-family: "Kalnia", Georgia, serif;
+    color: var(--text-color);
+}
+
+p {
+    font-family: "Inter", Arial, sans-serif;
+    color: var(--text-color);
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* =========================================================
+   TOP NAVIGATION
+   ========================================================= */
+
+#nav {
+    width: 100%;
+    min-height: 86px;
+
+    padding: 10px 4%;
+
+    background-color: var(--secondary-color);
+
+    display: flex;
+    align-items: center;
+
+    gap: 28px;
+
+    /*
+       STICKY NAVIGATION
+       The navigation will remain at the top
+       while the user scrolls.
+    */
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+
+    box-shadow: 0 2px 8px rgba(51, 18, 0, 0.12);
+}
+
+
+/* Navigation logo */
+
+#nav img {
+    width: 60px;
+    height: 60px;
+
+    object-fit: contain;
+
+    margin-right: auto;
+
+    flex-shrink: 0;
+}
+
+
+/* Navigation links */
+
+#nav a {
+    color: var(--primary-color);
+
+    font-family: "Inter", Arial, sans-serif;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    text-decoration: none;
+
+    padding: 10px 4px;
+
+    white-space: nowrap;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+#nav a:hover {
+    color: var(--accent-color);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+#hero {
+    width: 100%;
+    min-height: 540px;
+
+    padding: 80px 4%;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: flex-start;
+
+    overflow: hidden;
+
+    /*
+       HERO IMAGE AS BACKGROUND
+    */
+
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(51, 18, 0, 0.95) 0%,
+            rgba(51, 18, 0, 0.88) 42%,
+            rgba(51, 18, 0, 0.30) 70%,
+            rgba(51, 18, 0, 0.10) 100%
+        ),
+        url("../images/hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/*
+   Hide the original hero <img>.
+   The image is now the background.
+*/
+
+#hero > img {
+    display: none;
+}
+
+
+/* Hero heading */
+
+#hero h1 {
+    width: 100%;
+    max-width: 560px;
+
+    margin-bottom: 18px;
+
+    color: var(--primary-color);
+
+    font-family: "Kalnia", Georgia, serif;
+
+    font-size: clamp(38px, 5vw, 58px);
+
+    font-weight: 700;
+
+    line-height: 1.05;
+
+    overflow-wrap: break-word;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+/* Hero paragraph */
+
+#hero p {
+    width: 100%;
+    max-width: 500px;
+
+    margin-bottom: 28px;
+
+    color: var(--primary-color);
+
+    font-family: "Inter", Arial, sans-serif;
+
+    font-size: 18px;
+
+    line-height: 1.5;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+button {
+    border: none;
+
+    background-color: var(--button-color);
+    color: var(--primary-color);
+
+    padding: 13px 23px;
+
+    min-height: 44px;
+
+    border-radius: 30px;
+
+    font-family: "Inter", Arial, sans-serif;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+button:hover {
+    background-color: var(--secondary-color);
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 5px 12px rgba(51, 18, 0, 0.20);
+}
+
+
+button:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   ABOUT SECTION
+   ========================================================= */
+
+#about {
+    width: 100%;
+
+    padding: 40px 5% 50px;
+
+    background-color: var(--primary-color);
+
+    text-align: center;
+
+    overflow: hidden;
+}
+
+
+/* About heading */
+
+#about > h1 {
+    margin: 0 0 10px;
+
+    font-family: "Kalnia", Georgia, serif;
+
+    font-size: 36px;
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    color: var(--text-color);
+
+    text-align: center;
+}
+
+
+/* About description */
+
+#about > p {
+    width: 100%;
+    max-width: 800px;
+
+    margin: 0 auto 32px;
+
+    font-family: "Inter", Arial, sans-serif;
+
+    font-size: 13px;
+
+    line-height: 1.4;
+
+    color: var(--text-color);
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   ABOUT HIGHLIGHT CARDS
+   ========================================================= */
+
+.higlightCard {
+    width: 30%;
+
+    margin: 0 1.4%;
+
+    display: inline-flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    vertical-align: top;
+
+    background-color: transparent;
+
+    overflow: hidden;
+}
+
+
+/* Highlight heading */
+
+.higlightCard h3 {
+    width: 100%;
+
+    margin: 0 0 8px;
+
+    font-family: "Kalnia", Georgia, serif;
+
+    font-size: 18px;
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    color: var(--text-color);
+
+    text-align: center;
+}
+
+
+/* Highlight image */
+
+.higlightCard img {
+    width: 100%;
+
+    max-width: 190px;
+
+    height: 110px;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    display: block;
+
+    margin: 0 auto;
+
+    border-radius: 0;
+}
+
+
+/* =========================================================
+   MENU SECTION
+   ========================================================= */
+
+#menu {
+    width: 100%;
+
+    padding: 45px 4% 55px;
+
+    background-color: var(--accent-color);
+
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 30px;
+}
+
+
+/* Menu heading */
+
+#menu > h1 {
+    grid-column: 1 / -1;
+
+    margin-bottom: 0;
+
+    text-align: center;
+
+    font-family: "Kalnia", Georgia, serif;
+
+    font-size: 38px;
+
+    line-height: 1.2;
+}
+
+
+/* =========================================================
+   PRODUCT CARDS
+   ========================================================= */
+
+.ProductCard {
+    width: 100%;
+
+    min-width: 0;
+
+    padding: 10px;
+
+    background-color: var(--primary-color);
+
+    border-top: 4px solid var(--secondary-color);
+
+    border-radius: 0 0 8px 8px;
+
+    box-shadow: 0 4px 12px rgba(51, 18, 0, 0.08);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* Product card hover animation */
+
+.ProductCard:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 10px 22px rgba(51, 18, 0, 0.18);
+}
+
+
+/* Product title */
+
+.ProductCard h3 {
+    width: 100%;
+
+    min-height: 48px;
+
+    margin: 0 0 10px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    font-family: "Kalnia", Georgia, serif;
+
+    font-size: 24px;
+
+    line-height: 1.15;
+
+    overflow-wrap: normal;
+
+    word-break: normal;
+}
+
+
+/* Product images */
+
+.ProductCard img {
+    width: 100%;
+
+    height: 225px;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    border-radius: 5px;
+
+    margin-bottom: 12px;
+}
+
+
+/* Product description */
+
+.ProductCard p:first-of-type {
+    min-height: 45px;
+
+    margin: 0 0 4px;
+
+    font-family: "Inter", Arial, sans-serif;
+
+    font-size: 14px;
+
+    line-height: 1.45;
+}
+
+
+/* Product price */
+
+.ProductCard p:last-of-type {
+    margin: 0;
+
+    font-family: "Inter", Arial, sans-serif;
+
+    font-size: 20px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   STUDY BREAK SPECIAL
+   ========================================================= */
+
+#menu + section {
+    width: 100%;
+
+    min-height: 400px;
+
+    padding: 55px 6%;
+
+    background-color: var(--primary-color);
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    grid-template-rows: auto auto auto;
+
+    column-gap: 60px;
+
+    align-items: center;
+
+    position: relative;
+}
+
+
+/* Study Break image */
+
+#menu + section img {
+    grid-column: 1;
+
+    grid-row: 1 / 4;
+
+    width: 100%;
+
+    max-width: 480px;
+
+    height: 380px;
+
+    margin: 0 auto;
+
+    object-fit: cover;
+
+    border-radius: 7px;
+
+    background-color: #d9d9d9;
+}
+
+
+/* Special heading */
+
+#menu + section h1 {
+    grid-column: 2;
+
+    grid-row: 1;
+
+    margin-bottom: 20px;
+
+    text-align: center;
+
+    font-family: "Kalnia", Georgia, serif;
+
+    font-size: 40px;
+
+    line-height: 1.15;
+}
+
+
+/* Special description */
+
+#menu + section p {
+    grid-column: 2;
+
+    grid-row: 2;
+
+    width: 100%;
+
+    max-width: 480px;
+
+    margin: 0 auto 20px;
+
+    text-align: center;
+
+    font-family: "Inter", Arial, sans-serif;
+
+    font-size: 23px;
+
+    line-height: 1.4;
+}
+
+
+/* Special button */
+
+#menu + section a {
+    grid-column: 2;
+
+    grid-row: 3;
+
+    justify-self: center;
+}
+
+
+/* =========================================================
+   VISIT US
+   ========================================================= */
+
+#visitUs {
+    width: 100%;
+
+    padding: 50px 5%;
+
+    background-color: var(--primary-color);
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    grid-template-rows: auto 1fr;
+
+    column-gap: 50px;
+
+    align-items: center;
+}
+
+
+/* Visit Us image */
+
+#visitUs > img {
+    grid-column: 1;
+
+    grid-row: 1 / 3;
+
+    width: 100%;
+
+    max-width: 400px;
+
+    height: auto;
+
+    max-height: 430px;
+
+    margin: 0 auto;
+
+    object-fit: contain;
+}
+
+
+/* Visit Us heading */
+
+#visitUs > h1 {
+    grid-column: 2;
+
+    grid-row: 1;
+
+    margin-bottom: 20px;
+
+    text-align: center;
+
+    font-family: "Kalnia", Georgia, serif;
+
+    font-size: 38px;
+
+    line-height: 1.2;
+}
+
+
+/* Visit information */
+
+#visitCafe {
+    grid-column: 2;
+
+    grid-row: 2;
+
+    width: 100%;
+
+    text-align: center;
+}
+
+
+/* Visit Us subheadings */
+
+#visitCafe h3 {
+    margin: 15px 0 8px;
+
+    text-align: center;
+
+    font-family: "Kalnia", Georgia, serif;
+
+    font-size: 18px;
+}
+
+
+/* Visit Us paragraphs */
+
+#visitCafe p {
+    margin: 0 0 15px;
+
+    text-align: center;
+
+    font-family: "Inter", Arial, sans-serif;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   CONTACT SECTION
+   ========================================================= */
+
+#contact {
+    width: 100%;
+
+    padding: 45px 6% 55px;
+
+    background-color: var(--primary-color);
+}
+
+
+/* Contact form */
+
+#contact form {
+    width: 100%;
+
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 2fr;
+
+    column-gap: 25px;
+
+    row-gap: 8px;
+
+    align-items: center;
+}
+
+
+/* Labels */
+
+#contact label {
+    color: var(--text-color);
+
+    font-family: "Inter", Arial, sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+
+/* Inputs */
+
+#contact input {
+    width: 100%;
+
+    height: 52px;
+
+    min-height: 52px;
+
+    padding: 12px 14px;
+
+    border: 1px solid #d7b894;
+
+    border-radius: 5px;
+
+    background-color: var(--accent-color);
+
+    color: var(--text-color);
+
+    font-family: "Inter", Arial, sans-serif;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* Keep all text boxes the same size */
+
+#contact input[type="text"],
+#contact input[name="subject"],
+#contact input[name="message"] {
+    width: 100%;
+
+    height: 52px;
+
+    min-height: 52px;
+
+    max-height: 52px;
+}
+
+
+/* Input focus */
+
+#contact input:focus {
+    border-color: var(--button-color);
+
+    box-shadow:
+        0 0 0 3px rgba(169, 104, 53, 0.15);
+}
+
+
+/* Submit link */
+
+#contact form > a {
+    grid-column: 2;
+
+    justify-self: end;
+
+    margin-top: 12px;
+}
+
+
+/* =========================================================
+   FOOTER - DESKTOP
+   ========================================================= */
+
+footer {
+    width: 100%;
+
+    padding: 25px 4% 15px;
+
+    background-color: var(--secondary-color);
+
+    color: var(--primary-color);
+
+    display: grid;
+
+    grid-template-columns: 1fr auto;
+
+    grid-template-rows: auto auto auto;
+
+    column-gap: 50px;
+
+    row-gap: 10px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   FOOTER TITLE
+   ========================================================= */
+
+footer h1 {
+    grid-column: 1;
+
+    grid-row: 1;
+
+    margin: 0;
+
+    color: var(--primary-color);
+
+    font-family: "Kalnia", Georgia, serif;
+
+    font-size: 27px;
+
+    line-height: 1.2;
+
+    display: flex;
+
+    align-items: center;
+}
+
+
+/* Footer logo */
+
+footer h1::before {
+    content: "";
+
+    display: inline-block;
+
+    width: 50px;
+    height: 50px;
+
+    margin-right: 12px;
+
+    flex-shrink: 0;
+
+    background-image: url("../images/brewingLogo.png");
+
+    background-size: contain;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+}
+
+
+/* =========================================================
+   FOOTER TAGLINE
+   ========================================================= */
+
+footer > p:first-of-type {
+    position: absolute;
+
+    left: calc(4% + 62px);
+
+    top: 68px;
+
+    margin: 0;
+
+    color: var(--primary-color);
+
+    font-family: "Inter", Arial, sans-serif;
+
+    font-size: 11px;
+
+    line-height: 1.3;
+}
+
+
+/* =========================================================
+   FOOTER CONTACT
+   ========================================================= */
+
+footer address {
+    grid-column: 1;
+
+    grid-row: 2;
+
+    margin-top: 15px;
+
+    color: var(--primary-color);
+
+    font-family: "Inter", Arial, sans-serif;
+
+    font-size: 12px;
+
+    font-style: normal;
+
+    line-height: 2;
+}
+
+
+/* =========================================================
+   FOOTER NAVIGATION
+   ========================================================= */
+
+#footer {
+    grid-column: 2;
+
+    grid-row: 1 / 3;
+
+    justify-self: end;
+
+    align-self: start;
+
+    min-width: 90px;
+
+    margin: 0;
+
+    padding: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 5px;
+}
+
+
+/* Footer links */
+
+#footer a {
+    display: block;
+
+    width: 100%;
+
+    padding: 2px 0;
+
+    color: var(--primary-color);
+
+    font-family: "Inter", Arial, sans-serif;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+
+    text-decoration: none;
+
+    white-space: nowrap;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+#footer a:hover {
+    color: var(--accent-color);
+
+    transform: translateX(-3px);
+}
+
+
+/*
+   The HTML contains <br> after each footer link.
+   Flexbox handles the spacing instead.
+*/
+
+#footer br {
+    display: none;
+}
+
+
+/* =========================================================
+   FOOTER COPYRIGHT
+   ========================================================= */
+
+footer > p:last-of-type {
+    grid-column: 1 / -1;
+
+    grid-row: 3;
+
+    width: 100%;
+
+    margin: 5px 0 0;
+
+    padding-top: 12px;
+
+    border-top:
+        1px solid rgba(255, 247, 232, 0.35);
+
+    text-align: center;
+
+    color: rgba(255, 247, 232, 0.45);
+
+    font-family: "Inter", Arial, sans-serif;
+
+    font-size: 9px;
+
+    line-height: 1.3;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media screen and (max-width: 900px) {
+
+    /* Navigation */
+
+    #nav {
+        gap: 15px;
+
+        padding: 10px 3%;
+    }
+
+
+    #nav img {
+        width: 55px;
+        height: 55px;
+    }
+
+
+    #nav a {
+        font-size: 13px;
+    }
+
+
+    /* Hero */
+
+    #hero {
+        min-height: 500px;
+
+        padding: 65px 5%;
+    }
+
+
+    #hero h1 {
+        max-width: 500px;
+
+        font-size: 46px;
+    }
+
+
+    /* About */
+
+    #about {
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+
+    .higlightCard {
+        width: 30%;
+
+        margin: 0 1.3%;
+    }
+
+
+    .higlightCard h3 {
+        font-size: 17px;
+    }
+
+
+    .higlightCard img {
+        max-width: 180px;
+
+        height: 105px;
+    }
+
+
+    /* Menu */
+
+    #menu {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 25px;
+    }
+
+
+    /* Study Break */
+
+    #menu + section {
+        column-gap: 30px;
+
+        padding: 45px 5%;
+    }
+
+
+    #menu + section h1 {
+        font-size: 34px;
+    }
+
+
+    #menu + section p {
+        font-size: 20px;
+    }
+
+
+    /* Visit */
+
+    #visitUs {
+        column-gap: 30px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE - 600PX AND BELOW
+   ========================================================= */
+
+@media screen and (max-width: 600px) {
+
+    html,
+    body {
+        width: 100%;
+
+        max-width: 100%;
+
+        overflow-x: hidden;
+    }
+
+
+    /* =====================================================
+       MOBILE NAVIGATION
+       ===================================================== */
+
+    #nav {
+        width: 100%;
+
+        min-height: auto;
+
+        padding: 10px 12px;
+
+        display: flex;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        align-items: center;
+
+        gap: 4px 12px;
+
+        /*
+           Remains sticky on mobile.
+        */
+
+        position: sticky;
+
+        top: 0;
+
+        z-index: 1000;
+    }
+
+
+    #nav img {
+        width: 48px;
+
+        height: 48px;
+
+        margin-right: 5px;
+    }
+
+
+    #nav a {
+        font-size: 12px;
+
+        padding: 8px 3px;
+    }
+
+
+    /* =====================================================
+       MOBILE HERO
+       ===================================================== */
+
+    #hero {
+        width: 100%;
+
+        min-height: 470px;
+
+        padding: 45px 22px;
+
+        justify-content: center;
+
+        background-image:
+            linear-gradient(
+                rgba(51, 18, 0, 0.68),
+                rgba(51, 18, 0, 0.68)
+            ),
+            url("../images/hero.jpg");
+
+        background-size: cover;
+
+        background-position: center;
+
+        overflow: hidden;
+    }
+
+
+    #hero h1 {
+        width: 100%;
+
+        max-width: 350px;
+
+        margin-bottom: 15px;
+
+        font-size: clamp(31px, 9vw, 40px);
+
+        line-height: 1.08;
+
+        overflow-wrap: break-word;
+
+        word-break: normal;
+    }
+
+
+    #hero p {
+        width: 100%;
+
+        max-width: 330px;
+
+        margin-bottom: 22px;
+
+        font-size: 16px;
+
+        line-height: 1.45;
+    }
+
+
+    #hero button {
+        min-height: 44px;
+
+        padding: 12px 18px;
+
+        font-size: 13px;
+    }
+
+
+    /* =====================================================
+       MOBILE ABOUT
+       ===================================================== */
+
+    #about {
+        width: 100%;
+
+        padding: 35px 18px 40px;
+
+        text-align: center;
+    }
+
+
+    #about > h1 {
+        font-size: 31px;
+
+        line-height: 1.15;
+
+        margin-bottom: 10px;
+    }
+
+
+    #about > p {
+        width: 100%;
+
+        max-width: 340px;
+
+        margin: 0 auto 25px;
+
+        font-size: 13px;
+
+        line-height: 1.45;
+    }
+
+
+    /*
+       ONE HIGHLIGHT CARD PER ROW
+    */
+
+    .higlightCard {
+        width: 100%;
+
+        margin: 0 0 22px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        vertical-align: middle;
+    }
+
+
+    .higlightCard:last-child {
+        margin-bottom: 0;
+    }
+
+
+    .higlightCard h3 {
+        width: 100%;
+
+        margin: 0 0 8px;
+
+        font-size: 20px;
+
+        line-height: 1.2;
+
+        text-align: center;
+    }
+
+
+    .higlightCard img {
+        width: 100%;
+
+        max-width: 250px;
+
+        height: 140px;
+
+        object-fit: cover;
+
+        object-position: center;
+
+        margin: 0 auto;
+    }
+
+
+    /* =====================================================
+       MOBILE MENU
+       ===================================================== */
+
+    #menu {
+        width: 100%;
+
+        padding: 35px 16px 45px;
+
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 22px;
+    }
+
+
+    #menu > h1 {
+        grid-column: 1;
+
+        margin-bottom: 5px;
+
+        font-size: 32px;
+
+        line-height: 1.15;
+    }
+
+
+    /* =====================================================
+       MOBILE PRODUCT CARDS
+       ===================================================== */
+
+    .ProductCard {
+        width: 100%;
+
+        min-width: 0;
+
+        padding: 10px;
+    }
+
+
+    .ProductCard:hover {
+        transform: translateY(-3px);
+    }
+
+
+    .ProductCard h3 {
+        width: 100%;
+
+        min-height: auto;
+
+        margin-bottom: 12px;
+
+        font-size: 28px;
+
+        line-height: 1.12;
+
+        text-align: left;
+
+        justify-content: flex-start;
+
+        overflow-wrap: normal;
+
+        word-break: normal;
+    }
+
+
+    /*
+       Product image keeps a consistent aspect ratio
+       on mobile.
+    */
+
+    .ProductCard img {
+        width: 100%;
+
+        height: auto;
+
+        aspect-ratio: 4 / 3;
+
+        object-fit: cover;
+
+        margin-bottom: 12px;
+    }
+
+
+    .ProductCard p:first-of-type {
+        min-height: auto;
+
+        margin-bottom: 7px;
+
+        font-size: 15px;
+
+        line-height: 1.45;
+    }
+
+
+    .ProductCard p:last-of-type {
+        font-size: 20px;
+
+        margin-bottom: 3px;
+    }
+
+
+    /* =====================================================
+       MOBILE STUDY BREAK
+       ===================================================== */
+
+    #menu + section {
+        width: 100%;
+
+        min-height: auto;
+
+        padding: 40px 20px 50px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 20px;
+
+        text-align: center;
+    }
+
+
+    /* Study Break image */
+
+    #menu + section img {
+        order: 1;
+
+        width: 100%;
+
+        max-width: 330px;
+
+        height: 250px;
+
+        margin: 0 auto;
+
+        object-fit: cover;
+
+        border-radius: 7px;
+    }
+
+
+    /* Study Break heading */
+
+    #menu + section h1 {
+        order: 2;
+
+        width: 100%;
+
+        margin: 0;
+
+        font-size: 31px;
+
+        line-height: 1.15;
+
+        text-align: center;
+    }
+
+
+    /* Study Break paragraph */
+
+    #menu + section p {
+        order: 3;
+
+        width: 100%;
+
+        max-width: 330px;
+
+        margin: 0 auto;
+
+        font-size: 19px;
+
+        line-height: 1.4;
+
+        text-align: center;
+    }
+
+
+    /* Study Break button */
+
+    #menu + section a {
+        order: 4;
+
+        margin: 0 auto;
+    }
+
+
+    /* =====================================================
+       MOBILE VISIT US
+       ===================================================== */
+
+    #visitUs {
+        width: 100%;
+
+        padding: 40px 20px 50px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 17px;
+
+        text-align: center;
+
+        overflow: hidden;
+    }
+
+
+    /*
+       AUTO HEIGHT prevents the Visit Us image
+       from being cut off.
+    */
+
+    #visitUs > img {
+        order: 1;
+
+        width: 85%;
+
+        max-width: 280px;
+
+        height: auto;
+
+        max-height: none;
+
+        margin: 0 auto;
+
+        object-fit: contain;
+    }
+
+
+    #visitUs > h1 {
+        order: 2;
+
+        width: 100%;
+
+        margin: 0;
+
+        font-size: 31px;
+
+        line-height: 1.15;
+
+        text-align: center;
+
+        overflow-wrap: normal;
+    }
+
+
+    #visitCafe {
+        order: 3;
+
+        width: 100%;
+
+        text-align: center;
+    }
+
+
+    #visitCafe h3 {
+        margin: 12px 0 6px;
+
+        font-size: 17px;
+
+        text-align: center;
+    }
+
+
+    #visitCafe p {
+        width: 100%;
+
+        margin: 0 0 12px;
+
+        font-size: 13px;
+
+        line-height: 1.5;
+
+        text-align: center;
+    }
+
+
+    /* =====================================================
+       MOBILE CONTACT
+       ===================================================== */
+
+    #contact {
+        width: 100%;
+
+        padding: 35px 15px 45px;
+    }
+
+
+    #contact form {
+        width: 100%;
+
+        max-width: none;
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 7px;
+
+        align-items: stretch;
+    }
+
+
+    #contact label {
+        width: 100%;
+
+        margin-top: 8px;
+
+        font-size: 14px;
+    }
+
+
+    /*
+       ALL CONTACT BOXES SAME SIZE
+    */
+
+    #contact input,
+    #contact input[type="text"],
+    #contact input[name="subject"],
+    #contact input[name="message"] {
+        width: 100%;
+
+        height: 52px;
+
+        min-height: 52px;
+
+        max-height: 52px;
+
+        padding: 12px 14px;
+
+        font-size: 15px;
+    }
+
+
+    #contact form > a {
+        width: 100%;
+
+        margin-top: 15px;
+
+        display: flex;
+
+        justify-content: flex-end;
+    }
+
+
+    #contact button {
+        min-height: 44px;
+
+        font-size: 12px;
+    }
+
+
+    /* =====================================================
+       MOBILE FOOTER
+       ===================================================== */
+
+    footer {
+        width: 100%;
+
+        padding: 25px 15px 15px;
+
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        grid-template-rows: auto auto auto auto;
+
+        column-gap: 15px;
+
+        row-gap: 10px;
+    }
+
+
+    /* Footer title */
+
+    footer h1 {
+        grid-column: 1 / -1;
+
+        grid-row: 1;
+
+        font-size: 24px;
+
+        line-height: 1.15;
+    }
+
+
+    footer h1::before {
+        width: 45px;
+
+        height: 45px;
+
+        margin-right: 10px;
+    }
+
+
+    /* Footer tagline */
+
+    footer > p:first-of-type {
+        position: static;
+
+        grid-column: 1 / -1;
+
+        grid-row: 2;
+
+        margin: 0 0 5px 55px;
+
+        font-size: 10px;
+
+        line-height: 1.3;
+    }
+
+
+    /* Footer contact */
+
+    footer address {
+        grid-column: 1;
+
+        grid-row: 3;
+
+        margin-top: 5px;
+
+        font-size: 11px;
+
+        line-height: 1.9;
+    }
+
+
+    /* Footer navigation */
+
+    #footer {
+        grid-column: 2;
+
+        grid-row: 3;
+
+        justify-self: end;
+
+        align-self: start;
+
+        min-width: 75px;
+
+        gap: 3px;
+
+        align-items: flex-start;
+    }
+
+
+    #footer a {
+        font-size: 11px;
+
+        padding: 2px 0;
+
+        line-height: 1.5;
+    }
+
+
+    /* Copyright */
+
+    footer > p:last-of-type {
+        grid-column: 1 / -1;
+
+        grid-row: 4;
+
+        margin-top: 5px;
+
+        padding-top: 10px;
+
+        font-size: 8px;
+    }
+}
+
+
+/* =========================================================
+   EXTRA SMALL MOBILE - 390PX AND BELOW
+   ========================================================= */
+
+@media screen and (max-width: 390px) {
+
+    /* =====================================================
+       NAV
+       ===================================================== */
+
+    #nav {
+        gap: 3px 9px;
+
+        padding-left: 10px;
+
+        padding-right: 10px;
+    }
+
+
+    #nav img {
+        width: 45px;
+
+        height: 45px;
+    }
+
+
+    #nav a {
+        font-size: 11px;
+
+        padding: 8px 2px;
+    }
+
+
+    /* =====================================================
+       HERO
+       ===================================================== */
+
+    #hero {
+        min-height: 450px;
+
+        padding: 40px 20px;
+    }
+
+
+    #hero h1 {
+        max-width: 340px;
+
+        font-size: 32px;
+
+        line-height: 1.08;
+    }
+
+
+    #hero p {
+        max-width: 320px;
+
+        font-size: 15px;
+    }
+
+
+    /* =====================================================
+       ABOUT
+       ===================================================== */
+
+    #about {
+        padding-left: 15px;
+
+        padding-right: 15px;
+    }
+
+
+    #about > h1 {
+        font-size: 29px;
+    }
+
+
+    #about > p {
+        max-width: 350px;
+
+        font-size: 12px;
+    }
+
+
+    .higlightCard {
+        margin-bottom: 20px;
+    }
+
+
+    .higlightCard h3 {
+        font-size: 18px;
+    }
+
+
+    .higlightCard img {
+        max-width: 230px;
+
+        height: 130px;
+    }
+
+
+    /* =====================================================
+       MENU
+       ===================================================== */
+
+    #menu {
+        padding-left: 12px;
+
+        padding-right: 12px;
+    }
+
+
+    .ProductCard {
+        padding: 9px;
+    }
+
+
+    .ProductCard h3 {
+        font-size: 26px;
+    }
+
+
+    .ProductCard img {
+        aspect-ratio: 4 / 3;
+    }
+
+
+    /* =====================================================
+       STUDY BREAK
+       ===================================================== */
+
+    #menu + section img {
+        max-width: 310px;
+
+        height: 230px;
+    }
+
+
+    #menu + section h1 {
+        font-size: 29px;
+    }
+
+
+    /* =====================================================
+       VISIT US
+       ===================================================== */
+
+    #visitUs > img {
+        width: 82%;
+
+        max-width: 270px;
+    }
+
+
+    #visitUs > h1 {
+        font-size: 29px;
+    }
+
+
+    /* =====================================================
+       FOOTER
+       ===================================================== */
+
+    footer {
+        padding-left: 12px;
+
+        padding-right: 12px;
+    }
+}
