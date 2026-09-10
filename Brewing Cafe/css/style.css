@@ -1,13 +1,6 @@
-/* =========================================================
-   GOOGLE FONTS
-   ========================================================= */
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kalnia:wght@500;600;700&display=swap');
 
 
-/* =========================================================
-   ROOT COLORS
-   ========================================================= */
 
 :root {
     --primary-color: #fff7e8;
@@ -17,11 +10,6 @@
     --accent-color: #ffecd4;
 }
 
-
-/* =========================================================
-   RESET
-   ========================================================= */
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -30,12 +18,6 @@
 
 html {
     scroll-behavior: smooth;
-
-    /*
-       Prevent headings/sections from being hidden
-       behind the sticky navigation when clicking
-       navigation links.
-    */
     scroll-padding-top: 90px;
 }
 
@@ -50,11 +32,6 @@ body {
 
     overflow-x: hidden;
 }
-
-
-/* =========================================================
-   GENERAL TYPOGRAPHY
-   ========================================================= */
 
 h1,
 h2,
@@ -74,10 +51,7 @@ img {
 }
 
 
-/* =========================================================
-   TOP NAVIGATION
-   ========================================================= */
-
+/* TOP NAVIGATION */
 #nav {
     width: 100%;
     min-height: 86px;
@@ -90,12 +64,6 @@ img {
     align-items: center;
 
     gap: 28px;
-
-    /*
-       STICKY NAVIGATION
-       The navigation will remain at the top
-       while the user scrolls.
-    */
     position: sticky;
     top: 0;
 
@@ -148,10 +116,7 @@ img {
 }
 
 
-/* =========================================================
-   HERO
-   ========================================================= */
-
+/*HERO*/
 #hero {
     width: 100%;
     min-height: 540px;
@@ -168,10 +133,6 @@ img {
 
     overflow: hidden;
 
-    /*
-       HERO IMAGE AS BACKGROUND
-    */
-
     background-image:
         linear-gradient(
             90deg,
@@ -187,16 +148,9 @@ img {
     background-repeat: no-repeat;
 }
 
-
-/*
-   Hide the original hero <img>.
-   The image is now the background.
-*/
-
 #hero > img {
     display: none;
 }
-
 
 /* Hero heading */
 
@@ -222,7 +176,6 @@ img {
     z-index: 2;
 }
 
-
 /* Hero paragraph */
 
 #hero p {
@@ -243,11 +196,7 @@ img {
     z-index: 2;
 }
 
-
-/* =========================================================
-   BUTTONS
-   ========================================================= */
-
+/* BUTTONS */
 button {
     border: none;
 
@@ -288,10 +237,7 @@ button:active {
 }
 
 
-/* =========================================================
-   ABOUT SECTION
-   ========================================================= */
-
+/* ABOUT US SECTION */
 #about {
     width: 100%;
 
@@ -305,7 +251,7 @@ button:active {
 }
 
 
-/* About heading */
+/* About Us heading */
 
 #about > h1 {
     margin: 0 0 10px;
@@ -323,7 +269,7 @@ button:active {
 }
 
 
-/* About description */
+/* About Us description */
 
 #about > p {
     width: 100%;
@@ -343,10 +289,8 @@ button:active {
 }
 
 
-/* =========================================================
-   ABOUT HIGHLIGHT CARDS
-   ========================================================= */
-
+/*
+ABOUT US HIGHLIGHT CARDS */
 .higlightCard {
     width: 30%;
 
@@ -407,10 +351,7 @@ button:active {
 }
 
 
-/* =========================================================
-   MENU SECTION
-   ========================================================= */
-
+/* MENU SECTION */
 #menu {
     width: 100%;
 
@@ -443,10 +384,7 @@ button:active {
 }
 
 
-/* =========================================================
-   PRODUCT CARDS
-   ========================================================= */
-
+/* PRODUCT CARDS */
 .ProductCard {
     width: 100%;
 
@@ -554,10 +492,7 @@ button:active {
 }
 
 
-/* =========================================================
-   STUDY BREAK SPECIAL
-   ========================================================= */
-
+/* STUDY BREAK SPECIAL */
 #menu + section {
     width: 100%;
 
@@ -657,10 +592,7 @@ button:active {
 }
 
 
-/* =========================================================
-   VISIT US
-   ========================================================= */
-
+/* VISIT US */
 #visitUs {
     width: 100%;
 
@@ -761,10 +693,7 @@ button:active {
 }
 
 
-/* =========================================================
-   CONTACT SECTION
-   ========================================================= */
-
+/* CONTACT SECTION */
 #contact {
     width: 100%;
 
@@ -839,7 +768,6 @@ button:active {
 }
 
 
-/* Keep all text boxes the same size */
 
 #contact input[type="text"],
 #contact input[name="subject"],
@@ -853,8 +781,6 @@ button:active {
     max-height: 52px;
 }
 
-
-/* Input focus */
 
 #contact input:focus {
     border-color: var(--button-color);
@@ -875,10 +801,7 @@ button:active {
 }
 
 
-/* =========================================================
-   FOOTER - DESKTOP
-   ========================================================= */
-
+/* FOOTER - DESKTOP */
 footer {
     width: 100%;
 
@@ -904,10 +827,7 @@ footer {
 }
 
 
-/* =========================================================
-   FOOTER TITLE
-   ========================================================= */
-
+/* FOOTER TITLE */
 footer h1 {
     grid-column: 1;
 
@@ -953,10 +873,7 @@ footer h1::before {
 }
 
 
-/* =========================================================
-   FOOTER TAGLINE
-   ========================================================= */
-
+/* FOOTER TAGLINE */
 footer > p:first-of-type {
     position: absolute;
 
@@ -976,10 +893,7 @@ footer > p:first-of-type {
 }
 
 
-/* =========================================================
-   FOOTER CONTACT
-   ========================================================= */
-
+/* FOOTER CONTACT */
 footer address {
     grid-column: 1;
 
@@ -999,10 +913,7 @@ footer address {
 }
 
 
-/* =========================================================
-   FOOTER NAVIGATION
-   ========================================================= */
-
+/* FOOTER NAVIGATION */
 #footer {
     grid-column: 2;
 
@@ -1061,21 +972,12 @@ footer address {
     transform: translateX(-3px);
 }
 
-
-/*
-   The HTML contains <br> after each footer link.
-   Flexbox handles the spacing instead.
-*/
-
 #footer br {
     display: none;
 }
 
 
-/* =========================================================
-   FOOTER COPYRIGHT
-   ========================================================= */
-
+/* FOOTER COPYRIGHT */
 footer > p:last-of-type {
     grid-column: 1 / -1;
 
@@ -1102,13 +1004,8 @@ footer > p:last-of-type {
 }
 
 
-/* =========================================================
-   TABLET
-   ========================================================= */
-
+/* TABLET */
 @media screen and (max-width: 900px) {
-
-    /* Navigation */
 
     #nav {
         gap: 15px;
@@ -1128,8 +1025,6 @@ footer > p:last-of-type {
     }
 
 
-    /* Hero */
-
     #hero {
         min-height: 500px;
 
@@ -1143,8 +1038,6 @@ footer > p:last-of-type {
         font-size: 46px;
     }
 
-
-    /* About */
 
     #about {
         padding-left: 4%;
@@ -1171,16 +1064,12 @@ footer > p:last-of-type {
     }
 
 
-    /* Menu */
-
     #menu {
         grid-template-columns: repeat(2, minmax(0, 1fr));
 
         gap: 25px;
     }
 
-
-    /* Study Break */
 
     #menu + section {
         column-gap: 30px;
@@ -1199,17 +1088,13 @@ footer > p:last-of-type {
     }
 
 
-    /* Visit */
-
     #visitUs {
         column-gap: 30px;
     }
 }
 
 
-/* =========================================================
-   MOBILE - 600PX AND BELOW
-   ========================================================= */
+/* MOBILE - 600PX AND BELOW */
 
 @media screen and (max-width: 600px) {
 
@@ -1222,10 +1107,8 @@ footer > p:last-of-type {
         overflow-x: hidden;
     }
 
-
-    /* =====================================================
-       MOBILE NAVIGATION
-       ===================================================== */
+/* MOBILE NAVIGATION */
+      
 
     #nav {
         width: 100%;
@@ -1244,9 +1127,6 @@ footer > p:last-of-type {
 
         gap: 4px 12px;
 
-        /*
-           Remains sticky on mobile.
-        */
 
         position: sticky;
 
@@ -1272,9 +1152,7 @@ footer > p:last-of-type {
     }
 
 
-    /* =====================================================
-       MOBILE HERO
-       ===================================================== */
+    /* MOBILE HERO */
 
     #hero {
         width: 100%;
@@ -1339,9 +1217,7 @@ footer > p:last-of-type {
     }
 
 
-    /* =====================================================
-       MOBILE ABOUT
-       ===================================================== */
+    /* MOBILE ABOUT */
 
     #about {
         width: 100%;
@@ -1372,11 +1248,6 @@ footer > p:last-of-type {
 
         line-height: 1.45;
     }
-
-
-    /*
-       ONE HIGHLIGHT CARD PER ROW
-    */
 
     .higlightCard {
         width: 100%;
@@ -1426,9 +1297,7 @@ footer > p:last-of-type {
     }
 
 
-    /* =====================================================
-       MOBILE MENU
-       ===================================================== */
+    /* MOBILE MENU */
 
     #menu {
         width: 100%;
@@ -1454,9 +1323,7 @@ footer > p:last-of-type {
     }
 
 
-    /* =====================================================
-       MOBILE PRODUCT CARDS
-       ===================================================== */
+    /* MOBILE PRODUCT CARDS */
 
     .ProductCard {
         width: 100%;
@@ -1492,12 +1359,6 @@ footer > p:last-of-type {
         word-break: normal;
     }
 
-
-    /*
-       Product image keeps a consistent aspect ratio
-       on mobile.
-    */
-
     .ProductCard img {
         width: 100%;
 
@@ -1529,9 +1390,7 @@ footer > p:last-of-type {
     }
 
 
-    /* =====================================================
-       MOBILE STUDY BREAK
-       ===================================================== */
+    /*  MOBILE STUDY BREAK */
 
     #menu + section {
         width: 100%;
@@ -1614,9 +1473,7 @@ footer > p:last-of-type {
     }
 
 
-    /* =====================================================
-       MOBILE VISIT US
-       ===================================================== */
+    /* MOBILE VISIT US */
 
     #visitUs {
         width: 100%;
@@ -1634,11 +1491,6 @@ footer > p:last-of-type {
         overflow: hidden;
     }
 
-
-    /*
-       AUTO HEIGHT prevents the Visit Us image
-       from being cut off.
-    */
 
     #visitUs > img {
         order: 1;
@@ -1705,9 +1557,8 @@ footer > p:last-of-type {
     }
 
 
-    /* =====================================================
-       MOBILE CONTACT
-       ===================================================== */
+    
+       MOBILE CONTACT */
 
     #contact {
         width: 100%;
@@ -1740,9 +1591,7 @@ footer > p:last-of-type {
     }
 
 
-    /*
-       ALL CONTACT BOXES SAME SIZE
-    */
+    /* ALL CONTACT BOXES SAME SIZE */
 
     #contact input,
     #contact input[type="text"],
@@ -1780,9 +1629,8 @@ footer > p:last-of-type {
     }
 
 
-    /* =====================================================
-       MOBILE FOOTER
-       ===================================================== */
+    
+       MOBILE FOOTER */
 
     footer {
         width: 100%;
@@ -1899,15 +1747,11 @@ footer > p:last-of-type {
 }
 
 
-/* =========================================================
-   EXTRA SMALL MOBILE - 390PX AND BELOW
-   ========================================================= */
-
+/*  MOBILE  */
 @media screen and (max-width: 390px) {
 
-    /* =====================================================
-       NAV
-       ===================================================== */
+    
+       NAV */
 
     #nav {
         gap: 3px 9px;
@@ -1932,9 +1776,8 @@ footer > p:last-of-type {
     }
 
 
-    /* =====================================================
-       HERO
-       ===================================================== */
+    
+       HERO */
 
     #hero {
         min-height: 450px;
@@ -1959,9 +1802,8 @@ footer > p:last-of-type {
     }
 
 
-    /* =====================================================
-       ABOUT
-       ===================================================== */
+    
+       ABOUT */
 
     #about {
         padding-left: 15px;
@@ -1999,9 +1841,8 @@ footer > p:last-of-type {
     }
 
 
-    /* =====================================================
-       MENU
-       ===================================================== */
+    
+       MENU */
 
     #menu {
         padding-left: 12px;
@@ -2025,9 +1866,8 @@ footer > p:last-of-type {
     }
 
 
-    /* =====================================================
-       STUDY BREAK
-       ===================================================== */
+    
+       STUDY BREAK */
 
     #menu + section img {
         max-width: 310px;
@@ -2041,9 +1881,8 @@ footer > p:last-of-type {
     }
 
 
-    /* =====================================================
-       VISIT US
-       ===================================================== */
+    
+       VISIT US */
 
     #visitUs > img {
         width: 82%;
@@ -2057,9 +1896,8 @@ footer > p:last-of-type {
     }
 
 
-    /* =====================================================
-       FOOTER
-       ===================================================== */
+    
+       FOOTER */
 
     footer {
         padding-left: 12px;
